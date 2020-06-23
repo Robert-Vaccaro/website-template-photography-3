@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Photography Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+.bobby-quarter img{margin-bottom: -6px; cursor: pointer}
+.bobby-quarter img:hover{opacity: 0.6; transition: 0.3s}
+</style>
+<body class="bobby-light-grey">
+
+<!-- Sidebar/menu -->
+<nav class="bobby-sidebar bobby-bar-block bobby-black bobby-animate-right bobby-top bobby-text-light-grey bobby-large" style="z-index:3;width:250px;font-weight:bold;display:none;right:0;" id="mySidebar">
+  <a href="javascript:void()" onclick="bobby_close()" class="bobby-bar-item bobby-button bobby-center bobby-padding-32">CLOSE</a> 
+  <a href="#" onclick="bobby_close()" class="bobby-bar-item bobby-button bobby-center bobby-padding-16">PORTFOLIO</a> 
+  <a href="#about" onclick="bobby_close()" class="bobby-bar-item bobby-button bobby-center bobby-padding-16">ABOUT ME</a> 
+  <a href="#contact" onclick="bobby_close()" class="bobby-bar-item bobby-button bobby-center bobby-padding-16">CONTACT</a>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="bobby-container bobby-top bobby-white bobby-xlarge bobby-padding-16">
+  <span class="bobby-left bobby-padding">SOME NAME</span>
+  <a href="javascript:void(0)" class="bobby-right bobby-button bobby-white" onclick="bobby_open()">☰</a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="bobby-overlay bobby-animate-opacity" onclick="bobby_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="bobby-main bobby-content" style="max-width:1600px;margin-top:83px">
+  
+  <!-- Photo grid -->
+  <div class="bobby-row bobby-grayscale-min">
+    <div class="bobby-quarter">
+      <img src="images/bg15.jpg" style="width:100%" onclick="onClick(this)" alt="Beautiful Nature">
+      <img src="images/bg14.jpg" style="width:100%" onclick="onClick(this)" alt="More Beautiful Nature">
+      <img src="images/bg13.jpg" style="width:100%" onclick="onClick(this)" alt="Beautiful Nature Again!">
+   </div>
+    
+   <div class="bobby-quarter">
+      <img src="images/bg12.jpg" style="width:100%" onclick="onClick(this)" alt="Beautiful Nature">
+      <img src="images/bg11.jpg" style="width:100%" onclick="onClick(this)" alt="More Beautiful Nature">
+      <img src="images/bg10.jpg" style="width:100%" onclick="onClick(this)" alt="Nature again.. At its finest!">
+    </div>
+    
+    <div class="bobby-quarter">
+      <img src="images/bg9.jpg" style="width:100%" onclick="onClick(this)" alt="Beautiful Nature">
+      <img src="images/bg8.jpg" style="width:100%" onclick="onClick(this)" alt="More Beautiful Nature">
+      <img src="images/bg7.jpg" style="width:100%" onclick="onClick(this)" alt="Beautiful Nature Again!">
+    </div>
+
+    <div class="bobby-quarter">
+      <img src="images/bg6.jpg" style="width:100%" onclick="onClick(this)" alt="Beautiful Nature">
+      <img src="images/bg5.jpg" style="width:100%" onclick="onClick(this)" alt="More Beautiful Nature">
+      <img src="images/bg4.jpg" style="width:100%" onclick="onClick(this)" alt="Nature again.. At its finest!">
+    </div>
+  </div>
+
+  <!-- Pagination -->
+  <div class="bobby-center bobby-padding-32">
+    <div class="bobby-bar">
+      <a href="#" class="bobby-bar-item bobby-button bobby-hover-black">«</a>
+      <a href="#" class="bobby-bar-item bobby-black bobby-button">1</a>
+      <a href="#" class="bobby-bar-item bobby-button bobby-hover-black">2</a>
+      <a href="#" class="bobby-bar-item bobby-button bobby-hover-black">3</a>
+      <a href="#" class="bobby-bar-item bobby-button bobby-hover-black">4</a>
+      <a href="#" class="bobby-bar-item bobby-button bobby-hover-black">»</a>
+    </div>
+  </div>
+  
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="bobby-modal bobby-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="bobby-button bobby-black bobby-xlarge bobby-display-topright">×</span>
+    <div class="bobby-modal-content bobby-animate-zoom bobby-center bobby-transparent bobby-padding-64">
+      <img id="img01" class="bobby-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <!-- About section -->
+  <div class="bobby-container bobby-dark-grey bobby-center bobby-text-light-grey bobby-padding-32" id="about">
+    <h4><b>About Me</b></h4>
+    <img src="images/woman3.jpeg" alt="Me" class="bobby-image bobby-padding-32" width="600" height="650">
+    <div class="bobby-content bobby-justify" style="max-width:600px">
+      <h4>My Name</h4>
+      <p>Some text about me. I love taking photos of PEOPLE. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </p>
+      <p>mail: example@example.com</p>
+      <p>tel: 5353 35531</p>
+      <hr class="bobby-opacity">
+      <h4 class="bobby-padding-16">Technical Skills</h4>
+      <p class="bobby-wide">Photography</p>
+      <div class="bobby-white">
+        <div class="bobby-container bobby-padding-small bobby-center bobby-grey" style="width:95%">95%</div>
+      </div>
+      <p class="bobby-wide">Web Design</p>
+      <div class="bobby-white">
+        <div class="bobby-container bobby-padding-small bobby-center bobby-grey" style="width:85%">85%</div>
+      </div>
+      <p class="bobby-wide">Photoshop</p>
+      <div class="bobby-white">
+        <div class="bobby-container bobby-padding-small bobby-center bobby-grey" style="width:80%">80%</div>
+      </div>
+      <p><button class="bobby-button bobby-light-grey bobby-padding-large bobby-margin-top bobby-margin-bottom bobby-hover-black">Download Resume</button></p>
+      <hr class="bobby-opacity">
+
+      <h4 class="bobby-padding-16">How much I charge</h4>
+      <div class="bobby-row-padding" style="margin:0 -16px">
+        <div class="bobby-half bobby-margin-bottom">
+          <ul class="bobby-ul bobby-white bobby-center">
+            <li class="bobby-black bobby-xlarge bobby-padding-32">Basic</li>
+            <li class="bobby-padding-16">Web Design</li>
+            <li class="bobby-padding-16">Photography</li>
+            <li class="bobby-padding-16">5GB Storage</li>
+            <li class="bobby-padding-16">Mail Support</li>
+            <li class="bobby-padding-16">
+              <h2>$ 10</h2>
+              <span class="bobby-opacity">per month</span>
+            </li>
+            <li class="bobby-light-grey bobby-padding-24">
+              <button class="bobby-button bobby-white bobby-padding-large">Sign Up</button>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="bobby-half">
+          <ul class="bobby-ul bobby-white bobby-center">
+            <li class="bobby-black bobby-xlarge bobby-padding-32">Pro</li>
+            <li class="bobby-padding-16">Web Design</li>
+            <li class="bobby-padding-16">Photography</li>
+            <li class="bobby-padding-16">50GB Storage</li>
+            <li class="bobby-padding-16">Endless Support</li>
+            <li class="bobby-padding-16">
+              <h2>$ 25</h2>
+              <span class="bobby-opacity">per month</span>
+            </li>
+            <li class="bobby-light-grey bobby-padding-24">
+              <button class="bobby-button bobby-white bobby-padding-large">Sign Up</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact section -->
+  <div class="bobby-container bobby-light-grey bobby-padding-32 bobby-padding-large" id="contact">
+    <div class="bobby-content" style="max-width:600px">
+      <h4 class="bobby-center"><b>Contact Me</b></h4>
+      <p>Do you want me to photograph you? Fill out the form and fill me in with the details :) I love meeting new people!</p>
+      <form action="/action_page.php" target="_blank">
+        <div class="bobby-section">
+          <label>Name</label>
+          <input class="bobby-input bobby-border" type="text" name="Name" required>
+        </div>
+        <div class="bobby-section">
+          <label>Email</label>
+          <input class="bobby-input bobby-border" type="text" name="Email" required>
+        </div>
+        <div class="bobby-section">
+          <label>Message</label>
+          <input class="bobby-input bobby-border" type="text" name="Message" required>
+        </div>
+        <button type="submit" class="bobby-button bobby-block bobby-black bobby-margin-bottom">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bobby-container bobby-padding-32 bobby-grey">  
+    <div class="bobby-row-padding">
+      <div class="bobby-third">
+        <h3>INFO</h3>
+        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>      
+      </div>
+    
+      <div class="bobby-third">
+        <h3>BLOG POSTS</h3>
+        <ul class="bobby-ul">
+          <li class="bobby-padding-16 bobby-hover-black">
+            <img src="images/bg1.jpg" class="bobby-left bobby-margin-right" style="width:50px">
+            <span class="bobby-large">Lorem</span><br>
+            <span>Sed mattis nunc</span>
+          </li>
+          <li class="bobby-padding-16 bobby-hover-black">
+            <img src="images/bg2.jpg" class="bobby-left bobby-margin-right" style="width:50px">
+            <span class="bobby-large">Ipsum</span><br>
+            <span>Praes tinci sed</span>
+          </li> 
+        </ul>
+      </div>
+
+      <div class="bobby-third">
+        <h3>POPULAR TAGS</h3>
+        <p>
+          <span class="bobby-tag bobby-black bobby-margin-bottom">Travel</span> <span class="bobby-tag bobby-dark-grey bobby-small bobby-margin-bottom">New York</span> <span class="bobby-tag bobby-dark-grey bobby-small bobby-margin-bottom">London</span>
+          <span class="bobby-tag bobby-dark-grey bobby-small bobby-margin-bottom">IKEA</span> <span class="bobby-tag bobby-dark-grey bobby-small bobby-margin-bottom">NORWAY</span> <span class="bobby-tag bobby-dark-grey bobby-small bobby-margin-bottom">DIY</span>
+          <span class="bobby-tag bobby-dark-grey bobby-small bobby-margin-bottom">Ideas</span> <span class="bobby-tag bobby-dark-grey bobby-small bobby-margin-bottom">Baby</span> <span class="bobby-tag bobby-dark-grey bobby-small bobby-margin-bottom">Family</span>
+          <span class="bobby-tag bobby-dark-grey bobby-small bobby-margin-bottom">News</span> <span class="bobby-tag bobby-dark-grey bobby-small bobby-margin-bottom">Clothing</span> <span class="bobby-tag bobby-dark-grey bobby-small bobby-margin-bottom">Shopping</span>
+          <span class="bobby-tag bobby-dark-grey bobby-small bobby-margin-bottom">Sports</span> <span class="bobby-tag bobby-dark-grey bobby-small bobby-margin-bottom">Games</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+  
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function bobby_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function bobby_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+</script>
+
+
+</body>
+</html>
